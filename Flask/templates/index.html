@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block body %}
+        <h1>register</h1>
+        <form action="/register" method="post">
+
+            <input  placeholder="enter email" type="email" name="email" id="">
+            <br><select name="sports" id="">
+                <option disabled selected value="">sports</option>
+                {% for sport in sports %}
+                    <option value="{{sport}}">{{sport}}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="register">
+
+        </form>
+{% endblock %}
+    
